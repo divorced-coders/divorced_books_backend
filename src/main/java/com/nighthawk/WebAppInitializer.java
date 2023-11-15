@@ -1,13 +1,10 @@
 package com.nighthawk;
 
+import javax.servlet.*;
+
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.GenericWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
-
-import jakarta.servlet.MultipartConfigElement;
-import jakarta.servlet.ServletContext;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.ServletRegistration;
 
 public class WebAppInitializer implements WebApplicationInitializer {
 
