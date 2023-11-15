@@ -1,4 +1,4 @@
-package com.nighthawk.spring_portfolio;
+package com.nighthawk;
 
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.GenericWebApplicationContext;

@@ -1,4 +1,4 @@
-package com.nighthawk.spring_portfolio.mvc;
+package com.nighthawk.mvc;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
