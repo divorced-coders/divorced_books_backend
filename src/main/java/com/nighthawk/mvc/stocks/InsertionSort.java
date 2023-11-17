@@ -27,35 +27,27 @@ The last annotation connect to database
 @Entity
 @TypeDef(name="json", typeClass = JsonType.class)
 
-public class DailyStocks {
+public class InsertionSort {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @NonNull
-    private String open;
+    private int[] transactions;
 
-    @NonNull
-    private String close;
+    private static void insertionSort(int[] transactions) {
+        int n = transactions.length;
+        for (int i = 1; i < n; ++i) {
+            int key = transactions[i];
+            int j = i - 1;
 
-    @NonNull
-    private String high;
-
-    @NonNull
-    private String low;
-
-    @NonNull
-    private String volume;
-
-    @NonNull
-    private String symbol;
-
-    public DailyStocks(String open, String close, String high, String low, String volume, String symbol){
-        this.open = open;
-        this.close = close;
-        this.high = high;
-        this.low = low;
-        this.volume = volume;
-        this.symbol = symbol;
+            // Move elements of array[0..i-1] that are greater than key
+            // to one position ahead of their current position
+            while (j >= 0 && transactions[j] > key) {
+                transactions[j + 1] = transactions[j];
+                j = j - 1;
+            }
+            transactions[j + 1] = key;
+        }
     }
 }

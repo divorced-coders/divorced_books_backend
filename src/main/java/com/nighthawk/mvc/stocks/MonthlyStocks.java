@@ -62,7 +62,7 @@ public class MonthlyStocks {
     private Date date;
 
     @ManyToMany(fetch = EAGER)
-    private Collection<DailyStocks> daily = new ArrayList<>();
+    private Collection<InsertionSort> daily = new ArrayList<>();
 
     public MonthlyStocks(String open, String close, String high, String low, String volume, String symbol, Date date){
         this.open = open;
